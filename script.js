@@ -1,8 +1,8 @@
 let activeuser = 0;
 let box;
 let num;
+let any = false;
 let count = 0;
-let ch = [0, 1, 2];
 let arr = new Array(9);
 function getid(e) {
   e = e || window.event;
@@ -33,13 +33,16 @@ function declarewinner(win) {
   document.querySelector('.modal-body').innerHTML = `Player ${win + 1} Wins🎉`;
   document.getElementById('helo').click();
   document.getElementById('done').addEventListener('click', () => {
+    any = false;
     gameRefresh();
   });
 }
 function checkdiagnal() {
   if (arr[0] == arr[4] && arr[4] == arr[8] && arr[4] != undefined) {
     declarewinner(arr[0]);
+    any = true;
   } else if (arr[2] == arr[4] && arr[4] == arr[6] && arr[4] != undefined) {
+    any = true;
     declarewinner(arr[2]);
   }
 }
@@ -50,6 +53,7 @@ function checkrow() {
       arr[1 + i] == arr[2 + i] &&
       arr[1 + i] != undefined
     ) {
+      any = true;
       declarewinner(arr[i]);
     }
   }
@@ -61,41 +65,44 @@ function checkcol() {
       arr[i + 3] == arr[i + 6] &&
       arr[i + 3] != undefined
     ) {
+      any = true;
       declarewinner(arr[i]);
     }
   }
 }
-function checkdraw() {
-  let count = 0;
-  for (i = 0; i < 9; i++) {
-    if (arr[i] != undefined) count++;
-  }
-  if (count == 9) {
-    document.querySelector('.modal-body').innerHTML = `Oops! There Is A Draw📍`;
-    document.getElementById('helo').click();
-    document.getElementById('done').addEventListener('click', () => {
-      gameRefresh();
-    });
+function checkdraw(ok) {
+  if (!ok) {
+    let coun = 0;
+    for (i = 0; i < 9; i++) {
+      if (arr[i] != undefined) coun++;
+    }
+    if (coun == 9) {
+      document.querySelector(
+        '.modal-body'
+      ).innerHTML = `Oops! There Is A Draw📍`;
+      document.getElementById('helo').click();
+      document.getElementById('done').addEventListener('click', () => {
+        gameRefresh();
+      });
+    }
   }
 }
 function put(activeuserr) {
   if (activeuserr == 0 && document.getElementById(box).innerHTML == '') {
     document.getElementById(box).innerHTML = 'X';
-    console.log('hello');
     arr[num - 1] = activeuser;
     checkdiagnal();
     checkrow();
     checkcol();
-    checkdraw();
+    checkdraw(any);
     swith();
   } else if (activeuserr == 1 && document.getElementById(box).innerHTML == '') {
     document.getElementById(box).innerHTML = 'O';
-    console.log('hello');
     arr[num - 1] = activeuser;
     checkdiagnal();
     checkcol();
     checkrow();
-    checkdraw();
+    checkdraw(any);
     swith();
   }
 }
