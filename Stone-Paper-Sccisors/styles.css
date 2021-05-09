@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+  border: 2px solid #363636;
+}
+
+.hello {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.body {
+  background-image: url('ph1.jpg');
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-img-top {
+  border: 5px solid #555555;
+}

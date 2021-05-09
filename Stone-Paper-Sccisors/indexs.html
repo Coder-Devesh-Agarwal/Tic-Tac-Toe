@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>The Tri Blockade🔺🔺🔺</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand hello" href="#">
+          <i class="bi bi-controller" style="font-size: 1.5rem"></i>
+          GameX
+        </a>
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="helo"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+        
+          Result🌌
+        </button>
+      </div>
+    </nav>
+    <h1>Welcome To GameX's Three Tics🎮</h1>
+    <div class="body">
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel">
+                ✨Congratulations✨
+              </h3>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">First Play Then Come🎴</div>
+            <div class="modal-footer">
+              <div onclick="getiid(this.id)">
+                <button type="button" class="btn btn-success" id="part1/">Type 1</button>
+                <button type="button" class="btn btn-danger" id="part2/">Type 2</button>
+                <button type="button" class="btn btn-warning" id="part3/">Type 3</button>
+              </div>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="done"
+                data-bs-dismiss="modal"
+              >
+                ✅Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-75 mx-auto">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card">
+              <img src="question-mark.jpg" id="player" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">🧑🧑Player 1</h5>
+                <p class="card-text"></p>
+                <div
+                  class="btn-group w-100"
+                  role="group"
+                  aria-label="Basic mixed styles example"
+                  onclick="getid(this.id)"
+                >
+                  <button type="button" class="btn btn-danger" id="1">
+                    Stone
+                  </button>
+                  <button type="button" class="btn btn-warning" id="2">
+                    Paper
+                  </button>
+                  <button type="button" class="btn btn-success" id="3">
+                    Scissors
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" ">
+              <img src="question-mark.jpg" id="computer" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">🖥🖥 Computer</h5>
+                <p class="card-text"></p>
+                <div
+                  class="btn-group w-100"
+                  role="group"
+                  aria-label="Basic mixed styles example"
+                >
+                  <button type="button" class="btn btn-warning" id="11">Stone</button>
+                  <button type="button" class="btn btn-success" id="12">Paper</button>
+                  <button type="button" class="btn btn-danger" id="13">Scissors</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

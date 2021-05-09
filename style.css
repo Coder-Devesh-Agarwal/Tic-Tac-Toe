@@ -38,3 +38,12 @@ h1 {
   font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 350%;
 }
+#bth {
+  border: 2px solid #555;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 300;
+  color: aliceblue;
+  background-color: #555;
+  padding: 5px 10px;
+}
