@@ -29,18 +29,18 @@ function getiid(v) {
     document.getElementById('13').innerHTML = 'Scissors';
   } else if (boxi === 'part2/') {
     document.getElementById('1').innerHTML = 'Chewgum';
-    document.getElementById('1').innerHTML = 'Barbie';
-    document.getElementById('1').innerHTML = 'Gun';
-    document.getElementById('1').innerHTML = 'Chewgum';
-    document.getElementById('1').innerHTML = 'Barbie';
-    document.getElementById('1').innerHTML = 'Gun';
+    document.getElementById('2').innerHTML = 'Barbie';
+    document.getElementById('3').innerHTML = 'Gun';
+    document.getElementById('11').innerHTML = 'Chewgum';
+    document.getElementById('12').innerHTML = 'Barbie';
+    document.getElementById('13').innerHTML = 'Gun';
   } else {
     document.getElementById('1').innerHTML = 'Water';
-    document.getElementById('1').innerHTML = 'Snake';
-    document.getElementById('1').innerHTML = 'Gun';
-    document.getElementById('1').innerHTML = 'Water';
-    document.getElementById('1').innerHTML = 'Snake';
-    document.getElementById('1').innerHTML = 'Gun';
+    document.getElementById('2').innerHTML = 'Snake';
+    document.getElementById('3').innerHTML = 'Gun';
+    document.getElementById('11').innerHTML = 'Water';
+    document.getElementById('12').innerHTML = 'Snake';
+    document.getElementById('13').innerHTML = 'Gun';
   }
   document.getElementById('done').click();
 }
